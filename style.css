@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 
@@ -62,7 +63,7 @@ p {
 /* header */
 
 header {
-    padding: 0px 90px;
+    padding: 0px 10%;
     background-color: #636c79;
 }
 header p {
@@ -76,10 +77,12 @@ nav , .hero {
     padding-bottom: 50px;
     
 }
+
 .nav-content {
     gap: 30px;
     color: white;
 }
+
 
 .nav-button {
     background: transparent;
@@ -89,15 +92,22 @@ nav , .hero {
 
 }
 
+.nav-content h5 {
+    padding-bottom: 0%;
+}
 
 .team-meeting {
     background-position: center;
     object-fit: cover;
     height: 400px;
     width: 300px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
+.hero-description {
+    width: 450px;
+
+}
 
 .email-box {
     padding: 5px 5px 5px 10px;
@@ -114,12 +124,11 @@ nav , .hero {
 /* Service Section */
 
 .service {
-    padding: 50px 90px ;
+    padding: 50px 10% ;
 }
 
 .service-image {
     background-position: center;
-    height: 500px;
     width: 100%;
     object-fit: cover;
     margin-top: 30px;
@@ -129,14 +138,18 @@ nav , .hero {
 
 .service-item {
     gap: 50px;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 60px;
 }
 
 
-
+.item-card {
+    width: 35vw;
+}
 
 .img-item {
     height: 400px;
-    width: 400px;
+    width: 35vw; 
     background-color: #686868;
     background-position: center;
     object-fit: cover;
@@ -152,11 +165,12 @@ nav , .hero {
 /* team section */
 
 .team {
-    padding: 50px 90px ;
+    padding: 50px 10% ;
 }
 
 .team-intro {
     margin-bottom: 40px;
+    align-items: flex-start;
 }
 .team-intro.flex > * {
     flex: 1
@@ -181,6 +195,9 @@ nav , .hero {
     margin: auto; 
 }
 
+.team-card-item {
+    width: 250px
+}
 
 /* footer */
 
@@ -188,14 +205,57 @@ nav , .hero {
 footer {
     background-color: #1b1b21;
     color: #fff;
-    padding: 50px 90px ;
+    padding: 50px 10% ;
 }
 
 .footer-logo {
     padding: 30px 0px;
     border-bottom: 1px solid rgb(105, 105, 105);
+    gap: 20px;
 }
 
 .footer-menu {
     padding: 40px 0px;
+    gap: 50px;
+}
+
+
+@media screen and (max-width: 768px){
+    .team-meeting {
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero-description {
+        height: 100%;
+        width: 100%;
+    }
+
+    .email-box {
+        align-items: flex-start;
+        width: 80%;
+        flex-wrap: nowrap;
+    }
+
+    .email-box input {
+        width: 100px;
+    }
+
+    .team-img {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .team-card-item {
+        width: 250px;
+    }
+
+    .img-item {
+        width: 100%;
+    }
+
+    .item-card {
+        width: 100%;
+    }
 }
